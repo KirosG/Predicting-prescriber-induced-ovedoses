@@ -1,0 +1,52 @@
+State,2014Rate,2014Number,2014Range,2013Rate,2013Number,2013Range,Change,Significant
+ND,6.3,43,6.3 to 11.0,2.8,20,2.8 to 11.0,125,Significant 
+NE,7.2,125,6.3 to 11.0,6.5,117,2.8 to 11.0,10.8,Not Significant
+SD,7.8,63,6.3 to 11.0,6.9,55,2.8 to 11.0,13,Not Significant
+IA,8.8,264,6.3 to 11.0,9.3,275,2.8 to 11.0,-5.4,Not Significant
+TX,9.7,"2,601",6.3 to 11.0,9.3,"2,446",2.8 to 11.0,4.3,Not Significant
+MN,9.6,517,6.3 to 11.0,9.6,523,2.8 to 11.0,0,Not Significant
+VA,11.7,980,11.1 to 13.5,10.2,854,2.8 to 11.0,14.7,Significant 
+MS,11.6,336,11.1 to 13.5,10.8,316,2.8 to 11.0,7.4,Not Significant
+GA,11.9,"1,206",11.1 to 13.5,10.8,"1,098",2.8 to 11.0,10.2,Significant 
+HI,10.9,157,6.3 to 11.0,11,158,2.8 to 11.0,-0.9,Not Significant
+CA,11.1,"4,521",11.1 to 13.5,11.1,"4,452",11.1 to 13.5,0,Not Significant
+AR,12.6,356,11.1 to 13.5,11.1,319,11.1 to 13.5,13.5,Not Significant
+NY,11.3,"2,300",11.1 to 13.5,11.3,"2,309",11.1 to 13.5,0,Not Significant
+OR,12.8,522,11.1 to 13.5,11.3,455,11.1 to 13.5,13.3,Not Significant
+KS,11.7,332,11.1 to 13.5,12,331,11.1 to 13.5,-2.5,Not Significant
+IL,13.1,"1,705",11.1 to 13.5,12.1,"1,579",11.1 to 13.5,8.3,Significant 
+FL,13.2,"2,634",11.1 to 13.5,12.6,"2,474",11.1 to 13.5,4.8,Not Significant
+AL,15.2,723,13.6 to 16.0,12.7,598,11.1 to 13.5,19.7,Significant 
+NC,13.8,"1,358",13.6 to 16.0,12.9,"1,259",11.1 to 13.5,7,Not Significant
+SC,14.4,701,13.6 to 16.0,13,620,11.1 to 13.5,10.8,Not Significant
+ME,16.8,216,16.1 to 18.5,13.2,174,11.1 to 13.5,27.3,Significant 
+WA,13.3,979,11.1 to 13.5,13.4,969,11.1 to 13.5,-0.7,Not Significant
+ID,13.7,212,13.6 to 16.0,13.4,207,11.1 to 13.5,2.2,Not Significant
+AK,16.8,124,16.1 to 18.5,14.4,105,13.6 to 16.0,16.7,Not Significant
+MT,12.4,125,11.1 to 13.5,14.5,137,13.6 to 16.0,-14.5,Not Significant
+NJ,14,"1,253",13.6 to 16.0,14.5,"1,294",13.6 to 16.0,-3.4,Not Significant
+MD,17.4,"1,070",16.1 to 18.5,14.6,892,13.6 to 16.0,19.2,Significant 
+DC,14.2,96,13.6 to 16.0,15,102,13.6 to 16.0,-5.3,Not Significant
+WI,15.1,853,13.6 to 16.0,15,856,13.6 to 16.0,0.7,Not Significant
+VT,13.9,83,13.6 to 16.0,15.1,93,13.6 to 16.0,-7.9,Not Significant
+NH,26.2,334,21.0 to 35.5,15.1,203,13.6 to 16.0,73.5,Significant 
+CO,16.3,899,16.1 to 18.5,15.5,846,13.6 to 16.0,5.2,Not Significant
+MI,18,"1,762",16.1 to 18.5,15.9,"1,553",13.6 to 16.0,13.2,Significant 
+CT,17.6,623,16.1 to 18.5,16,582,13.6 to 16.0,10,Not Significant
+MA,19,"1,289",18.6 to 21.0,16,"1,081",13.6 to 16.0,18.8,Significant 
+IN,18.2,"1,172",16.1 to 18.5,16.6,"1,064",16.1 to 18.5,9.6,Significant 
+WY,19.4,109,18.6 to 21.0,17.2,98,16.1 to 18.5,12.8,Not Significant
+MO,18.2,"1,067",16.1 to 18.5,17.5,"1,025",16.1 to 18.5,4,Not Significant
+LA,16.9,777,16.1 to 18.5,17.8,809,16.1 to 18.5,-5.1,Not Significant
+TN,19.5,"1,269",18.6 to 21.0,18.1,"1,187",16.1 to 18.5,7.7,Not Significant
+AZ,18.2,"1,211",16.1 to 18.5,18.7,"1,222",18.6 to 21.0,-2.7,Not Significant
+DE,20.9,189,18.6 to 21.0,18.7,166,18.6 to 21.0,11.8,Not Significant
+PA,21.9,"2,732",21.0 to 35.5,19.4,"2,426",18.6 to 21.0,12.9,Significant 
+OK,20.3,777,18.6 to 21.0,20.6,790,18.6 to 21.0,-1.5,Not Significant
+OH,24.6,"2,744",21.0 to 35.5,20.8,"2,347",18.6 to 21.0,18.3,Significant 
+NV,18.4,545,16.1 to 18.5,21.1,614,21.0 to 35.5,-12.8,Not Significant
+UT,22.4,603,21.0 to 35.5,22.1,594,21.0 to 35.5,1.4,Not Significant
+RI,23.4,247,21.0 to 35.5,22.4,241,21.0 to 35.5,4.5,Not Significant
+NM,27.3,547,21.0 to 35.5,22.6,458,21.0 to 35.5,20.8,Significant 
+KY,24.7,"1,077",21.0 to 35.5,23.7,"1,019",21.0 to 35.5,4.2,Not Significant
+WV,35.5,627,21.0 to 35.5,32.2,570,21.0 to 35.5,10.2,Not Significant
