@@ -21,7 +21,7 @@ Cohorts of the Data Science Immersive, General Assembly @ Washington DC campus
 --------------------------------------------------------------------------------------------------------
 ### DATA SCIENCE IMMERSIVE FINAL CAPSTONE
 -------------------------------------------------------------------------------------------------------
-=================================================
+=================================================================================
  
 ## Introduction: 
 ------------------------------------------------------------------------------------------------------------
@@ -114,12 +114,12 @@ The opiod epidemic is increasing at alaring rate. Drug overdoses account for a s
 
 
 #### Tableau Visualization 
------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
   - [State and speciality based visuals](https://public.tableau.com/profile/kirosdsi.com#!/vizhome/CapstoneUSAOpiodscrisisByStateandSpeciality2018/ByState)
   
   
  ### Adverse effects of prescrption Drugs
- ===============================================================================
+ ==================================================================================
  
  
  - [impact of prescription](https://www.drugfreeworld.org/drugfacts/prescription-drugs.html)
