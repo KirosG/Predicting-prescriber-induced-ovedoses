@@ -102,14 +102,26 @@ The opiod epidemic is increasing at alaring rate. Drug overdoses account for a s
 ---------------------------------------------------------------------------------------------------------------------------------------
 #### Data Dictionary :
 =======================================================================================
- |Term                           |  Definition
+|Term                           |  Definition
 
- |Opioids                       | are a class of drugs naturally found in the opium poppy plan
+|Opioids                        | are a class of drugs naturally found in the opium poppy plan
  
- |common prescription opioids   | hydrocodone (Vicodin®) oxycodone (OxyContin®, Percocet®). oxymorphone (Opana®),morphine (Kadian®,Avinza®)
+|common prescription opioids    | hydrocodone (Vicodin®) oxycodone (OxyContin®, Percocet®). oxymorphone (Opana®),morphine (Kadian®,Avinza®)
                                 | codeine and fentanyl
 
 
+|NPI                            | unique National Provider Identifier number
+
+|Gender                         | (M/F)
+
+|State                          | U.S. State by abbreviation
+
+|Credentials                    | set of initials indicative of medical degree
+
+|Specialty                      | description of type of medicinal practice
+
+
+|Opioid.Prescriber              |  boolean label indicating whether or not that individual prescribed opiate drugs more than 10 times in the year 
 
 
 
@@ -127,6 +139,8 @@ The opiod epidemic is increasing at alaring rate. Drug overdoses account for a s
 
 ### Part D Prescriber- Opioids List of Drugs
 
+A long list of drugs with numeric values indicating the total number of prescriptions written for the year by that 
+individual
 
 
 ---------------------------------------------------------------------------------------------
