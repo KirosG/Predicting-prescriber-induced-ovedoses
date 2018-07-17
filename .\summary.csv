@@ -1,1 +1,0 @@
-epochs,learning_rate,dropout_rate,l2reg,batch_size,nodes,layers,trainingLoss,devLoss,testLoss,trainingAccuracy,devAccuracy,testAccuracy
