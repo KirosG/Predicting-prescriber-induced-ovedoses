@@ -4,34 +4,34 @@
 
 
 ## Predicting prescriber induced overdoses
----------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
 
 
 
 
 **Author : Kiros Gebremariam**
--------------------------------------------------------------------------------------------------
--------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
 Cohorts of the Data Science Immersive, General Assembly @ Washington DC campus
-----------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
 
 =================================================================================
 
---------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
 ### DATA SCIENCE IMMERSIVE FINAL CAPSTONE
--------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
 =================================================================================
  
 ## Introduction: 
-------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
 This capestone was initaited with an idea that why are so much more physicians presecribing medications that can lead to overdose. I have worked with patients for more than a year in a clinic as well as a hospital and saw significant amount of patients requesting pain relief medications again and again. I have seen people i know been affected with the chronic and life threatening overdose. This capstone is a supervised training that uses RandomForest Classifier, Logistic Regression, and Neural Networks by using Keras to predict prescriber induced Overdose using datasets from CDC/Winder,CMS and the department of justice. The opiod prescriber is used as a target variable. 
 
------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
 
 The objective of this capestone is to **identify types of prescribers that are a high-risk for opioid related fatalities across the country and predict most influential opioids leading to opiod related deaths.**
 
--------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
 ### Data Cleaning: 
 
  The dataset for this capstone was collected from CDC,CMS,KAISER FAMILY FOUNDATION. The public health data was extracted from [CDC](https://wonder.cdc.gov/) which is and metadata from 2011 - July 2016. Downloading data from wonder requires the signing f online conscent and querring the needed information separately and the system will generate the text versions and i have extracting individually for the text versions the deaths associated with opiods. I noticed some anomalies when extracting data from Wonder in large due to the system or functionality of wonder tool they have to group the needed data based on the querry.  The opiods related with Drug enforcement Agency (DEA) licensed specialities connected with the opiods were downloaded from FDA and cross matched with the 2013-2016 Opiods drusglist for the year 2013-2016 can also be accessed [here](https://www.cms.gov/Research-Statistics-Data-and-Systems/Statistics-Trends-and-Reports/Medicare-Provider-Charge-Data/OpioidMap.html). The Part D Prescriber PUF file was sas version and in texti downloaded into individual tab separated text files as dowloading the 3.2GB data at once and extracting needs significant processing power besides I noticed some anomalies when extracting data from Wonder in large due to the system or functionality of wonder tool they have to group the needed data. The otherData was extraced from CMS Medicare [Part D Opioid Prescriber Data]( https://www.cms.gov/Research-Statistics-Data-and-Systems/Statistics-Trends-and-Reports/Medicare-Provider-Charge-Data/Part-D-Prescriber.html),[cms](https://www.cms.gov/Research-Statistics-Data-and-Systems/Statistics-Trends-and-Reports/Medicare-Provider-Charge-Data/OpioidMap.html) and  [NHE](https://www.cms.gov/Research-Statistics-Data-and-Systems/Statistics-Trends-and-Reports/NationalHealthExpendData/NationalHealthAccountsStateHealthAccountsProvider.html). All the datasets were collected from different sources and validated. Somedatasets are official querried from respective government institutions using private usercode and adjusted to the subject after cleaning. The overall dataset set was cleaned by dropping the unnecessary columns and missing data since the total missing data was very small compared to an overall dataset. In addition, feature engineering was performed by converting the helpful column into a binary classification, opiod prescriber and not opiod prescriber in one column as 1 or 0.
@@ -40,14 +40,14 @@ The objective of this capestone is to **identify types of prescribers that are a
 
 In overll, the opiod prescribing behaviour of health professionals were exponentially increased since opiod epidemic begin in the USA in 1996.The start of the Epidemic according the literatures and the CDC is the FDA approval of the Purdue Pharmaceuticals drugs and OxyContin for non-cancer pain, which caused  the beginning of the epidemics, though purdue pleaded guilty in 2007 and accepted a fine of $635 million fine. Grouping the specialists by the number of prescriptions they give to patients a significant amont of deaths across almost all states were observed. According to the datasets the number of opioid prescriptions dispensed by doctors steadily increased from 112 million prescriptions in 1992 to a peak of 282 million in 2012, since  2012 declined, falling to 236 million in 2016. In 2016, 6.2 billion hydrocodone pills were distributed nationwide. The second most prevalent opioid was oxycodone (Percocet). In 2016, according to the CDC around  5 billion oxycodone tablets were distributed in the United States, which i say it the bells curve,USA is 5% of he worlds population but 80% of the worlds opiods are prescribed here and its easy to see the severity of over prescription of opiates.Based on the dataset the state of california is leading with the highest numebr of deaths due to overdose. Kentucky has been hit particularly hard with 1,419 reported overdose deaths in 2016, which is 33.5 per 100,000 people according to the CDC wonder data and of those deaths 989 which is 23.6 per 100,000 people involved some type of opiods. it was followed by westverginia which is 884 reported  overdose deaths which is 52 per 100,000 people. The dataset has more than 25,000 prescribers after the initial clean up and prescriber shows that there are 108 unique Specialities, and 63 of them have a length of less than 40, so adjusting those so they can be a bit more balanced and sorted into specific specialities as others and specialities. The full analysis of the data sets and features are presented in notebook 1.2 & 1.3.
 
-------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
 # Prepare the Data for Modeling and feature importance visual
-------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
 
 ## Feature Selection
-------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
 
-Now we have  more than 355 features but what does they mean or actually how much do we need to know about these features. my Answer to this question would be  not need to know meaning of all the 355 features. What's important is that during the Exploratry data analysis  when we use the `.describe()` for numerical values and the `.describe(include['objects]), which describes all objects' we already have some insights to imagine in our mind we should know something like variance, standart deviation, number of sample (count) or max min values. These type of information helps to understand about what is going on  with the data.  Therfore, standirdization or normalization are important when  before visualization, feature selection, feature extraction or classificaiton. In order to visualizate  the data  in python, its always good to have the jupyter notbook inputs or libraries or packages installed like matplotlib or seaborn or plotly. The plots i used in this capstone are dominantly bar plots, histograms and to some extent maps. The visulization is one of the best methods to understand the data and helps in selecting what features to use for modeling and further extraction or elimination. 
+Now we have  more than 355 features but what does they mean or actually how much do we need to know about these features. my Answer to this question would be  not need to know meaning of all the 355 features. What's important is that during the Exploratry data analysis  when we use the `.describe()` for numerical values and the `.describe(include['objects])`, which describes all objects' we already have some insights to imagine in our mind we should know something like variance, standart deviation, number of sample (count) or max, min values. These type of information helps to understand about what is going on  with the data.  Therfore, standirdization or normalization are important when  before visualization, feature selection, feature extraction or classificaiton. In order to visualizate  the data  in python, its always good to have the jupyter notbook inputs or libraries or packages installed like matplotlib or seaborn or plotly. The plots i used in this capstone are dominantly bar plots, histograms and to some extent maps. The visulization is one of the best methods to understand the data and helps in selecting what features to use for modeling and further extraction or elimination. 
 
 There are mutiple ways that any datascientist would use to select features from the dataset.The methods can range from  feature selection with correlation either using heatmaps or just correlation, univariate feature selection, recursive feature elimination (RFE), recursive feature elimination with cross validation (RFECV) and tree based feature selection. Here i used correlation feature selection. Since my dataset has more than 355 features, most of them drug names. I will select specific features for model training. The original dataset contains 355 features, most of which are categorical attributes, dominantly the list of drug names that are approved as pain medications; that need special AED licensed prescriber.Here,my main target is to predict the overdoses using the  the list of prescriber specialists with NPI information and the FDA approved drug lists. The data set has only total opiod cliams and total claim counts and i took the standard prescription for opiod drugs is 84 days which is 12 weeks. The standards  used to measure the opiod overdose use morphine as gold standard. other drug types of drugs depending on their strength are measured  using morphine milligram equivalents (MME). according to the study by [CDC](https://www.cdc.gov/mmwr/volumes/66/wr/mm6626a4.htm?s_cid=mm6626a4_w) high-dose prescribing rates are classified as prescriptions with daily dosage greater than or equal to 90.  Therefore, based on the evidences i got from CDC and KFF i created an additional feature in the data cleaning, pre processing that shows avg_op_supply which i limit to the standard to be 84 days and any ones who prescribes the category of medications under the controlled substance act(CSA). The CSA is used for organizing drugs based on the risk of abuse or harm to users in five and my capestone focuses on the approved by [FDA](https://www.fda.gov/drugs/drugsafety/informationbydrugclass/ucm251735.htm) and [DEA](https://www.deadiversion.usdoj.gov/schedules/) to be prescribed by licensed and certified health professional.  These drug lists that are considered controlled substances under the Controlled Substances Act (CSA) are divided into five schedules.  An updated and complete list of the schedules is published annually in [Title 21 Code of Federal Regulations (C.F.R.) §§ 1308.11 through 1308.15](https://www.deadiversion.usdoj.gov/21cfr/cfr/2108cfrt.htm).
 
@@ -58,25 +58,25 @@ Therefore, for analysis and visualization  i only took those physicians who have
 
 
 
----------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
 
 ### Models
----------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
 The baseline  of the data set to overcome is 53.7%. Out of all the models (RandomForest Classification, Logistic Regression,Decision tree,Adaboost classifier, TPOTClassifier  and Neural Network using Keras), the Descision tree,random forest neural network out performed baseline and other models with 91% accuracy score on the test dataset with loss of 23%. The neural network uses Gender, speciality  as my target variable was binary classification problem, opiod prescriber or not opiod prescriber (0 to 1). The model trained on 21813 samples, validate on 2424 samples. The neural network model has the number of inputs as  hidden layers with relu activation function. The output layer uses sigmoid since it is a classification problem. The model compiler uses binary cross-entropy as a loss function, Adam optimizer, and accuracy metrics with an early stop to avoid exhaustive training. I have also used TPOT to see which model has best features and estimators and does not perform much better. The models i run to predict the opiod prescribers usinig binary method can be accesed in  notebooks 1.4 to 1.6.
 
-------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
 ### Conclusion
-------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
 The opiod epidemic is increasing at alaring rate. Drug overdoses account for a significant portion of accidental deaths in adolescents and young adults in the country, which are tomorrow leaders of the nation. The majority of drug overdoses  according to the dataset cross validated from multple sources indicate they involve opioids, a class of inhibitor molecules that disrupt transmission of pain signals through the nervous system. Medically, they are used as powerful pain relievers; however, they also produce feelings of euphoria, which is temporary happiness.. This temporary happiness and avoidance of pain makes the individual to consume more doses than prescribed at the end its highly addictive and prone to abuse. The use of opiods to mitigate or reduce chronic pain is one of the hot and controversial topics nowadays.There is no good studies show long term improved pain scores with chronic opioids rather than the ultimate death of the productive society and care must be taken. The prescription of opiods for only severe pain that sustain more than three months and no other drug mitigates, trying alternative non addictive medications is important, if there is any one taking medication, stoping would be appropriate. The interesting point from multiple sources and KFF datasets indicate most people who are addicted or overdesed and visited the emergency room got the medication from friends or from strangers , which indicates the prescription drugs quantity prescribed should not be more than the recommended and ther msu also exst a mechanism to remove left over pills like  either returning to the facility so that they will be removed with the hazardous wastes or submitting to the local police.
 
 
+[presentation](https://docs.google.com/presentation/d/1FiI4FG7PvAWse-es0xpTgp3MQs4dGWJPBNqCEQtqqik/edit#slide=id.g3e1de2c206_0_7)
 
 
-
-===================================================================================
+==================================================================================
 
 ### Datasources
--------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
 
    -  CDC  : 
        -[Current Multiple cause of Death](https://wonder.cdc.gov/mcd-icd10.html)
@@ -92,16 +92,18 @@ The opiod epidemic is increasing at alaring rate. Drug overdoses account for a s
     - Part [D Prescriber Data CY 2016](https://www.cms.gov/Research-Statistics-Data-and-Systems/Statistics-Trends-and-Reports/Medicare-Provider-Charge-Data/PartD2016.html)
     - National Opioid Epidemic based on morphine mg equivalents[mme](http://opioid.amfar.org/indicator/mme_percap) 
 
- Medicare Part D [Prescriber Look-up]( https://www.cms.gov/Research-Statistics-Data-and-Systems/Statistics-Trends-and-Reports/Medicare-Provider-Charge-Data/OpioidMap.html)
+ - Medicare Part D [Prescriber Look-up]( https://www.cms.gov/Research-Statistics-Data-and-Systems/Statistics-Trends-and-Reports/Medicare-Provider-Charge-Data/OpioidMap.html)
 
-### Technical terminologies and definitions can be accessed from the following address:
+### Technical terminologies and definitions can be accessed from the following address
+-----------------------------------------------------------------------------------
 
-      .[prescription-opioids]( https://www.drugabuse.gov/publications/drugfacts/prescription-opioids)
-      .[SCHEDULES OF CONTROLLED SUBSTANCES]( https://www.deadiversion.usdoj.gov/21cfr/cfr/2108cfrt.htm)
+   [Prescription _opioids](https://www.drugabuse.gov/publications/drugfacts/prescription-opioids)
+      
+   [SCHEDULES OF CONTROLLED SUBSTANCES](https://www.deadiversion.usdoj.gov/21cfr/cfr/2108cfrt.htm)
 
----------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
 #### Data Dictionary :
-=======================================================================================
+=================================================================================
 |Term                           |  Definition
 
 |Opioids                        | are a class of drugs naturally found in the opium poppy plan
@@ -126,12 +128,12 @@ The opiod epidemic is increasing at alaring rate. Drug overdoses account for a s
 
 
 #### Tableau Visualization 
-----------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
   - [State and speciality based visuals](https://public.tableau.com/profile/kirosdsi.com#!/vizhome/CapstoneUSAOpiodscrisisByStateandSpeciality2018/ByState)
   
   
  ### Adverse effects of prescrption Drugs
- ==================================================================================
+ =================================================================================
  
  
  - [impact of prescription](https://www.drugfreeworld.org/drugfacts/prescription-drugs.html)
@@ -143,11 +145,11 @@ A long list of drugs with numeric values indicating the total number of prescrip
 individual
 
 
----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
 
 |Drug Name                              | Generic Name
 
------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
 
 |ABSTRAL                                  |FENTANYL CITRATE
 |ACETAMINOPHEN-CODEINE                    | CETAMINOPHEN WITH CODEINE
